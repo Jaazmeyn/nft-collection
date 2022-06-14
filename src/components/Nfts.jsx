@@ -59,6 +59,7 @@ function Nfts() {
             <div className="nft">
                 <div className='nft-heading'>nfts</div>
 
+                
                 { atomicassets.data.forEach((eachAsset)=>{
 
                     if(eachAsset.owner === owner){
@@ -79,7 +80,6 @@ function Nfts() {
                                  <h2 className='nft-name'>{eachAssetInArr.data.name}</h2>
                                 {/* <p>user: {eachAssetInArr.owner}</p> */}
                                 <p className='nft-mint'>minted: #{eachAssetInArr.template_mint}</p>
-                               
                             </li>
                         )
                     })

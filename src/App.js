@@ -1,16 +1,13 @@
 // import logo from './assets/logo.svg';
 import './App.scss';
-import Nfts from './components/Nfts';
 import Header from './components/Header';
+import Content from './components/Content';
 
 function App() {
   return (
     <div className="container">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header> */}
       <Header />
-      <Nfts />
+      <Content />
     </div>
   );
 }
