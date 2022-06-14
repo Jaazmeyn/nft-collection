@@ -1,13 +1,16 @@
 import React from 'react'
+import './ConnectButton.modules.scss'
 
 function ConnectButton() {
     const connectFunction = () => {
 
         // open 
+
+        
     }
 
     return (
-        <div onClick={connectFunction()}>Connect to Account</div>
+        <div onClick={connectFunction()} className="connect-button">Connect to Account</div>
     )
 }
 

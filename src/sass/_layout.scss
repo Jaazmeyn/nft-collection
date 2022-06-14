@@ -1,7 +1,16 @@
 .container {
+  margin-top: 5rem;
+
+
+
+  .content {
+    border: var(--color-primary-dark-2) 3px solid;
+    border-radius: 16px;
+
     max-width: 120rem;//that the container can decrease
-    margin: 8rem auto;
+    margin: 8rem 5rem;
     background-color: var(--color-primary-dark-1);
     box-shadow: var(--shadow-dark);
-    min-height: 50rem;
+    min-height: 20rem;
   }
+}

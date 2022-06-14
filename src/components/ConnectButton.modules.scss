@@ -1,0 +1,17 @@
+.connect-button {
+    border-radius: 14px;
+    border: 2px solid var(--color-secondary);
+    color: var(--color-grey-light-1);
+    padding: 1rem;
+    margin: 0 auto;
+    position: relative;
+    max-width: 200px;
+    text-align: center;
+
+    &:hover{
+        border: 2px solid var(--color-secondary__dark);
+        background-color: var(--color-secondary);
+        color: var(--color-primary-dark-1);
+        cursor: pointer;
+    }
+}

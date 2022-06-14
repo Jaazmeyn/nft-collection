@@ -44,22 +44,20 @@ function Nfts() {
     },[]);
   
     if(loading){
-        return <div>loading</div>;
+        return <div className='nft-heading'>loading ..</div>;
     }
 
     if(error){
-        return <div>error</div>;
+        return <div className='nft-heading'>error :/</div>;
     }
-    // console.log('atomicassets', atomicassets.data[0]);
-
   
     if(atomicassets){
 
         return (
             <div className="nft">
-                <div className='nft-heading'>nfts</div>
+                <div className='heading nft-heading'> {owner} this are your nfts!</div>
 
-                
+            
                 { atomicassets.data.forEach((eachAsset)=>{
 
                     if(eachAsset.owner === owner){
@@ -70,7 +68,7 @@ function Nfts() {
                 
                 <ul className='nft-list'>{
                     ownerAssets.map(eachAssetInArr =>{
-                    // console.log(eachAssetInArr,'each array item in ul')
+
                        let imgNummer = eachAssetInArr.data.img;
                        let img = 'https://ipfs.io/ipfs/' + imgNummer;
 
