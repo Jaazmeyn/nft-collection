@@ -1,5 +1,6 @@
 import React, {useEffect, useState }from 'react'
 import findOwner from './findOwner'
+import './Nfts.modules.scss';
 
 function Nfts() {
     
@@ -31,7 +32,6 @@ function Nfts() {
         }).then(data => {
             setAtomicassets(data);
             setLoader(false);
-
   
         }).catch(error => {
             setError(true);
@@ -56,8 +56,9 @@ function Nfts() {
     if(atomicassets){
 
         return (
-            <div className="nft-view">data is here
-                <div>nfts</div>
+            <div className="nft">
+                <div className='nft-heading'>nfts</div>
+
                 { atomicassets.data.forEach((eachAsset)=>{
 
                     if(eachAsset.owner === owner){
@@ -66,18 +67,19 @@ function Nfts() {
                     }
                 })}
                 
-                <ul>{
+                <ul className='nft-list'>{
                     ownerAssets.map(eachAssetInArr =>{
                     // console.log(eachAssetInArr,'each array item in ul')
                        let imgNummer = eachAssetInArr.data.img;
                        let img = 'https://ipfs.io/ipfs/' + imgNummer;
 
                         return (
-                            <li key={eachAssetInArr.asset_id}>
-                                <h1>user: {eachAssetInArr.owner}</h1>
-                                <p>nft name: {eachAssetInArr.data.name}</p>
-                                <p>minted: #{eachAssetInArr.template_mint}</p>
-                                <img src={img} alt={eachAssetInArr.data.alt_img} width="200"/>
+                            <li key={eachAssetInArr.asset_id} className="nft-list-item-card">
+                                 <img src={img} alt={eachAssetInArr.data.alt_img} width="200" className='img-wrapper'/>
+                                 <h2 className='nft-name'>{eachAssetInArr.data.name}</h2>
+                                {/* <p>user: {eachAssetInArr.owner}</p> */}
+                                <p className='nft-mint'>minted: #{eachAssetInArr.template_mint}</p>
+                               
                             </li>
                         )
                     })

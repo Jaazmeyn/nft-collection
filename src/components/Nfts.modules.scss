@@ -1,0 +1,51 @@
+.nft {
+
+    background-color: var(--color-primary-dark-1);
+    &-heading {
+        text-align: center;
+        color: var(--color-grey-light-1);
+        font-size: 3rem;
+        display: block;
+        width: 100%;
+    }
+
+    &-list{
+        display: flex;
+        padding: 2rem;
+
+        &-item-card {
+            background-color: var(--color-primary-dark-2);
+            color: var(--color-grey-light-1);
+            margin: 10px;
+            max-width: 215px;
+            list-style-type: none;
+            border-radius: 16px;
+            cursor: pointer;
+            display: inline-block;
+            height: 305px;
+            padding: 16px 20px;
+            position: relative;
+            transition: all .1s ease-in-out;
+            
+            &:hover{
+                background-color: var(--color-primary-dark-3);
+                
+            }
+            .img-wrapper{
+                height: 176px;
+                width: 176px;
+            }
+            .nft {
+
+                &-name{
+                    text-align: center;
+                    font-weight: 700;
+
+                }
+                &-mint{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
