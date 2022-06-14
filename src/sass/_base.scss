@@ -10,7 +10,11 @@
     --color-red: #c33f39;
     --womplay-bg: linear-gradient(to right,#1C0F2C,#3F126B,#1C0F2C);
 
-    --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+    --shadow-dark: 0 2rem 6rem
+    rgb(0 0 0);
+
+    --shadow-orange: 0 2rem 6rem
+    rgba(255, 191, 73, 0.436);
 
     --line: 1px solid var(--color-grey-light-2);
 
