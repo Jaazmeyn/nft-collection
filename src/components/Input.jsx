@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import './Input.scss';
 
 // https://stackoverflow.com/questions/55757761/handle-an-input-with-react-hooks
 
@@ -18,7 +19,7 @@ function Input(props) {
     return (
         <div className="content">
             {/* based on input renderView */}
-            <input value={owner} onChange={e => handleInputChange(e)}/>
+            <input className="input" value={owner} onChange={e => handleInputChange(e)}/>
             {/* <button onClick={() => handleInputChange}>login</button> */}
             <RenderView />
         </div>

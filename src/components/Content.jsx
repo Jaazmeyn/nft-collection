@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Nfts from './Nfts'
 import Public from './Public';
+import './Input.scss';
+
 // import FindOwner from './findOwner'
 // import web3 from "../web3";
 // import Input from './input';
@@ -55,11 +57,11 @@ function Content() {
     return (
         <div className="content">
             {/* based on input renderView */}
-            <input value={owner} onChange={e => handleInputChange(e)}/>
+            <input className="input" value={owner} onChange={e => handleInputChange(e)}/>
             {/* <button onClick={() => handleInputChange}>login</button> */}
             <RenderView />
         </div>
-        );
+    );
         
 }
 
